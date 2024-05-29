@@ -1,4 +1,4 @@
-export const dummyData = [
+const chartDummyData = [
   {
     chartType: "BarChart",
     title: "Population of Largest U.S. Cities",
@@ -25,7 +25,39 @@ export const dummyData = [
   },
 ];
 
+const numbersDummyData = [
+  {
+    title1: "Cumulative Action Items - Personal",
+    data1: [0, 0],
+    title2: "Cumulative Action Items - Default Group",
+    data2: [147, 147],
+  },
+];
+
+// delete everything above once we have real data
+
+export const dashboardTypes = {
+  chart: "chart",
+  numbers: "numbers",
+};
+
+export const dashboardDummyData = [
+  {
+    type: dashboardTypes.chart,
+    data: chartDummyData[0],
+  },
+  {
+    type: dashboardTypes.numbers,
+    data: numbersDummyData[0],
+  },
+  {
+    type: dashboardTypes.chart,
+    data: chartDummyData[1],
+  },
+];
+
 export const colors = {
   white: "#ffffff",
   black: "#242424",
+  red: "#ff0000",
 };
