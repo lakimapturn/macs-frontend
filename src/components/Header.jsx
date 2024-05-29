@@ -1,47 +1,42 @@
-import {
-  Box,
-  Button,
-  Container,
-  HStack,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-} from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Button, ButtonGroup, HStack, Text, VStack } from "@chakra-ui/react";
 import { colors } from "../constants/constants";
+import NavOption from "./NavOption";
 
 const Header = (props) => {
   return (
-    <Box bg={colors.black}>
+    <VStack bg={colors.black}>
       <HStack
+        bg={colors.blue}
+        w="100%"
         paddingX="1.3rem"
-        paddingY="0.75rem"
         justifyContent="space-between"
       >
-        <Text fontSize="xl" fontWeight="500">
-          SoftwareName
+        <Text fontSize="xl" fontWeight="500" color={colors.black}>
+          Aegis
         </Text>
-        <HStack spacing={2}>
-          <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-              Directory 1
-            </MenuButton>
-            <MenuList>
-              <MenuItem>Option 1</MenuItem>
-              <MenuItem>Option 2</MenuItem>
-              <MenuItem>Option 3</MenuItem>
-              <MenuItem>Option 4</MenuItem>
-              <MenuItem>Option 5</MenuItem>
-            </MenuList>
-          </Menu>
-          <Menu>
-            <MenuButton as={Button}>Directory 2</MenuButton>
-          </Menu>
-        </HStack>
+        <ButtonGroup>
+          <Button size="sm" variant="link" color={colors.black}>
+            Forum
+          </Button>
+          <Button size="sm" variant="link" color={colors.black}>
+            Notifications
+          </Button>
+          <Button size="sm" variant="link" color={colors.black}>
+            Logout
+          </Button>
+          <Button size="sm" variant="link" color={colors.black}>
+            Settings
+          </Button>
+        </ButtonGroup>
       </HStack>
-    </Box>
+      {/* <Divider colorScheme="whiteAlpha" /> */}
+      <HStack spacing={4} justifyContent="center">
+        <NavOption to="/" text="Option 1">
+          Option 1
+        </NavOption>
+        <NavOption to="/">Option 2</NavOption>
+      </HStack>
+    </VStack>
   );
 };
 

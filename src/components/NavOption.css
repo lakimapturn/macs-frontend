@@ -1,0 +1,14 @@
+.nav-option {
+  text-decoration: none;
+  color: white;
+  border-bottom-color: #88b1f1;
+  height: 2.2rem;
+  transition: 0.15s all ease-in-out;
+  -webkit-transition: 0.15s all ease-in-out;
+}
+
+.nav-option:hover {
+  cursor: pointer;
+  border-bottom: 0.2rem solid #88b1f1;
+  color: #88b1f1;
+}

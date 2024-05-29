@@ -1,12 +1,9 @@
 import { Card, CardBody, CardHeader, Text } from "@chakra-ui/react";
-import { Chart } from "react-google-charts";
+import Chart from "react-apexcharts";
 import { colors } from "../constants/constants";
 
 const ChartItem = (props) => {
-  const top = new Set(["BarChart", "ColumnChart", "LineChart"]);
-  const options = {
-    legend: { position: top.has(props.chartType) ? "top" : "right" },
-  };
+  console.log(props);
   return (
     <Card {...props}>
       <CardBody>
@@ -14,11 +11,9 @@ const ChartItem = (props) => {
           {props.title}
         </Text>
         <Chart
-          chartType={props.chartType}
-          data={props.data}
-          options={options}
-          width="100%"
-          height="13rem"
+          series={props.series}
+          options={props.options}
+          type={props.options.chart.type}
         />
       </CardBody>
     </Card>
