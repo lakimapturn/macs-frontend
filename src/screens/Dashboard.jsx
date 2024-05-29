@@ -16,9 +16,9 @@ import DashboardItem from "../components/DashboardItem";
 
 const Dashboard = () => {
   return (
-    <VStack minH="100%" paddingX="2rem">
+    <VStack bg={colors.gray} minH="100%" paddingX="2rem">
       <Box marginY={"2rem"}>
-        <Text fontWeight="700" fontSize="5xl" color={colors.black}>
+        <Text fontWeight="700" fontSize="5xl" color={colors.blue}>
           Dashboard
         </Text>
       </Box>

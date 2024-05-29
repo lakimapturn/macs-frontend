@@ -58,6 +58,10 @@ export const dashboardDummyData = [
 
 export const colors = {
   white: "#ffffff",
-  black: "#242424",
+  black: "#2e3035",
+  // 2e3035
   red: "#ff0000",
+  gray: "#393c45",
+  pink: "#f29fbd",
+  blue: "#88b1f1",
 };

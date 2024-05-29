@@ -2,7 +2,6 @@ import { Card, CardBody, HStack, Text, VStack } from "@chakra-ui/react";
 import { colors } from "../constants/constants";
 
 const NumbersItem = (props) => {
-  console.log(props);
   return (
     <VStack justifyContent="space-between">
       <Card textAlign="center" w="100%">
