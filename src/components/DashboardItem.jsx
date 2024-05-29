@@ -3,6 +3,7 @@ import ChartItem from "./ChartItem";
 import NumbersItem from "./NumbersItem";
 
 const DashboardItem = ({ type, data }) => {
+  console.log(type, data);
   if (type === dashboardTypes.chart) {
     return <ChartItem {...data} />;
   }
